@@ -41,6 +41,7 @@ __集成SDK完毕__
 ```
 
 ```
+样例:
 NSString *buttonColorString = [TestinDataAnalysis getExperimentVariable:@"button_color" defaultValue:@"red"];
 if ([buttonColorString isEqualToString:@"red"]) {   //如果分配到红色版本
 	button.backgroundColor = [UIColor redColor];
@@ -55,6 +56,7 @@ if ([buttonColorString isEqualToString:@"red"]) {   //如果分配到红色版�
 ```[TestinDataAnalysis tracker:@"指标名称"];```
 
 ```
+样例:
 [TestinDataAnalysis tracker:@"button_click"];
 ```
 
