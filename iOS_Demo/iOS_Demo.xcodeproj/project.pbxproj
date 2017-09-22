@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		493898D81F74A04F00166AD9 /* TestinDataAnalysis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493898D61F74A02A00166AD9 /* TestinDataAnalysis.framework */; };
+		493898DA1F74A05A00166AD9 /* libicucore.A.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 493898D91F74A05A00166AD9 /* libicucore.A.tbd */; };
+		493898DC1F74A05F00166AD9 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 493898DB1F74A05F00166AD9 /* libsqlite3.tbd */; };
+		493898DE1F74A2D500166AD9 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 493898DD1F74A2D500166AD9 /* libz.tbd */; };
 		49CB98931F7367BE0067892F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CB98921F7367BE0067892F /* AppDelegate.m */; };
 		49CB98961F7367BE0067892F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CB98951F7367BE0067892F /* ViewController.m */; };
 		49CB98991F7367BE0067892F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49CB98971F7367BE0067892F /* Main.storyboard */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		493898D61F74A02A00166AD9 /* TestinDataAnalysis.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TestinDataAnalysis.framework; sourceTree = "<group>"; };
+		493898D91F74A05A00166AD9 /* libicucore.A.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.A.tbd; path = usr/lib/libicucore.A.tbd; sourceTree = SDKROOT; };
+		493898DB1F74A05F00166AD9 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		493898DD1F74A2D500166AD9 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		49CB988E1F7367BE0067892F /* iOS_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49CB98911F7367BE0067892F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		49CB98921F7367BE0067892F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -33,17 +41,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				493898DE1F74A2D500166AD9 /* libz.tbd in Frameworks */,
+				493898DC1F74A05F00166AD9 /* libsqlite3.tbd in Frameworks */,
+				493898DA1F74A05A00166AD9 /* libicucore.A.tbd in Frameworks */,
+				493898D81F74A04F00166AD9 /* TestinDataAnalysis.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		493898D71F74A04F00166AD9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				493898DD1F74A2D500166AD9 /* libz.tbd */,
+				493898DB1F74A05F00166AD9 /* libsqlite3.tbd */,
+				493898D91F74A05A00166AD9 /* libicucore.A.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		49CB98851F7367BE0067892F = {
 			isa = PBXGroup;
 			children = (
 				49CB98901F7367BE0067892F /* iOS_Demo */,
 				49CB988F1F7367BE0067892F /* Products */,
+				493898D71F74A04F00166AD9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +81,7 @@
 		49CB98901F7367BE0067892F /* iOS_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				493898D61F74A02A00166AD9 /* TestinDataAnalysis.framework */,
 				49CB98911F7367BE0067892F /* AppDelegate.h */,
 				49CB98921F7367BE0067892F /* AppDelegate.m */,
 				49CB98941F7367BE0067892F /* ViewController.h */,
@@ -278,11 +302,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5W66FF96MR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iOS_Demo",
+				);
 				INFOPLIST_FILE = iOS_Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.andrew.iOS-Demo";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.testin.TestinDataAnalysis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -291,11 +327,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5W66FF96MR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iOS_Demo",
+				);
 				INFOPLIST_FILE = iOS_Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.andrew.iOS-Demo";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.testin.TestinDataAnalysis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

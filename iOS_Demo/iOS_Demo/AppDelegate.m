@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 
+//STEP 1: 导入头文件
+#import <TestinDataAnalysis/TestinDataAnalysis.h>
+
 @interface AppDelegate ()
 
 @end
@@ -17,6 +20,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //STEP 2:显示小助手(上线时务必去除此方法)
+    [TestinDataAnalysis setDebugTouchAssist:YES];
+    
+    //STEP 3:初始化SDK
+    [TestinDataAnalysis initWithAppkey:@"TESTIN_ic2ca18f2-bc65-459d-854a-3eb7c057dce5" launchOptions:launchOptions];
     return YES;
 }
 
