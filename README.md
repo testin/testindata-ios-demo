@@ -10,13 +10,16 @@ iOS_Demo 工程名
 
 ```AppDelegate.m```中进行集成
 
-* 1.导入头文件  
+* 1.导入头文件  
+
 ```#import <TestinDataAnalysis/TestinDataAnalysis.h>```
 
 * 2.开启调试小助手(上线时务必去除此方法)  
+
 ```[TestinDataAnalysis setDebugTouchAssist:YES];```
 
 * 3.初始化SDK  
+
 ```[TestinDataAnalysis initWithAppkey:@"App Key" launchOptions:launchOptions];```
 
 __集成SDK完毕__
@@ -28,11 +31,14 @@ __集成SDK完毕__
 实验界面进行，以```ViewController.m```为例.
 
 * 1.导入头文件  
+
 ```#import <TestinDataAnalysis/TestinDataAnalysis.h>```
 
 * 2.获取实验变量
+
 ```
-[TestinDataAnalysis getExperimentVariable:@"变量名" defaultValue:@"默认值"];```
+[TestinDataAnalysis getExperimentVariable:@"变量名" defaultValue:@"默认值"];
+```
 
 ```
 NSString *buttonColorString = [TestinDataAnalysis getExperimentVariable:@"button_color" defaultValue:@"red"];
@@ -41,9 +47,11 @@ if ([buttonColorString isEqualToString:@"red"]) {   //如果分配到红色版�
 } else {                                            //如果分配到绿色版本
 	button.backgroundColor = [UIColor greenColor];
 }
+
 ```
 
 * 3.埋点
+
 ```[TestinDataAnalysis tracker:@"指标名称"];```
 
 ```
