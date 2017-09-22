@@ -1,12 +1,12 @@
 # TestinData-iOS-Demo 说明
 
-###文件结构
+##文件结构
 iOS_Demo 工程名  
 ┗━━━━ TestinDataAnalysis (TestinSDK)  
 ┗━━━━ AppDelegate (SDK初始化页面)  
 ┗━━━━ ViewController (实验按钮修改界面)  
 
-###集成步骤
+##集成步骤
 
 ```AppDelegate.m```中进行集成
 
@@ -23,7 +23,7 @@ __集成SDK完毕__
 
 ---
 
-###编写实现相关逻辑
+##编写实现相关逻辑
 
 实验界面进行，以```ViewController.m```为例.
 
